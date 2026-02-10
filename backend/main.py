@@ -69,7 +69,7 @@ os.makedirs("static/profiles", exist_ok=True)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Load models once
-road_model = YOLO("models/best.pt")
+road_model = YOLO("backend/models/best.pt")
 general_model = YOLO("yolov8s.pt")
 
 RELEVANT_CLASSES = [0, 1, 2, 3, 5, 7, 9, 11]
