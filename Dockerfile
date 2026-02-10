@@ -20,4 +20,4 @@ RUN mkdir -p static/hazards
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
-CMD ["sh", "-c", "uvicorn backend.main:app --bind 0.0.0.0:$PORT"]
+CMD ["sh", "-c", "gunicorn -w 2 -k uvicorn.workers.UvicornWorker backend.main:app --bind 0.0.0.0:$PORT"]
