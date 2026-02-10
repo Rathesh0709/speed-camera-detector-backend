@@ -1,0 +1,19 @@
+# Exclude heavy data files from Docker image
+database/*.json
+hazards.json
+road_hazards.json
+*.mp4
+build/
+.dart_tool/
+.idea/
+.flutter-plugins*
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+test/
+*.pt
+!backend/models/*.pt
+!backend/yolov8s.pt
